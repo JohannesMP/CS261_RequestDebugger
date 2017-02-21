@@ -34,6 +34,7 @@ function DebugPrintRoute(req, res) {
   debug_reply.params = req.params;
   debug_reply.query = req.query;
   debug_reply.body = req.body;
+  debug_reply.route_path = req.route.path;
   
   //util.inspect allows us to avoid the problem of recursive objects.
   console.log("REQUEST RECEIVED:\n" + util.inspect(debug_reply, showHidden=false, depth=2, colorize=false) + "\n\n");
