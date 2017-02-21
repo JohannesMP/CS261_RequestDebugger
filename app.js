@@ -39,7 +39,7 @@ function DebugPrintRoute(req, res) {
   console.log("REQUEST RECEIVED:\n" + util.inspect(debug_reply, showHidden=false, depth=2, colorize=false) + "\n\n");
 
   // print in the reply, also for easy debugging
-  res.end( JSON.stringify(debug_reply) );
+  res.end( util.inspect(debug_reply, showHidden=false, depth=2, colorize=false) );
 }
 
 // Handle all requests, Post, Get, etc.
